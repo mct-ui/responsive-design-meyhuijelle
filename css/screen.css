@@ -366,6 +366,9 @@ a:focus {
 
 .o-section {
   display: flow-root;
+  /* dit is zodat margin colapsing verholpen wordt. */
+  /* We willen dat er 72px tussen de eerste en de tweede o-section—lg zit. Maar door margin collapsing lukt dit niet. 
+  Zorg er voor dat die margin-collapsing wordt opgelost door aan .o-section display: flow-root toe te voegen. */
 }
 
 /* sibling selecten is die + o-section die volgt op class met o-section wil dit zeggen eerste krijgt het niet omdat hij niet volgt op class met o-section */
@@ -449,6 +452,7 @@ a:focus {
 
 .c-nav__link {
   text-decoration: none;
+  /* font-weight: 400; */
   padding: 8px 0;
   /* links zijn standaard inline elementen!!!! */
   /* om de padding wel toe te passen doe je dit: */
